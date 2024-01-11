@@ -14,6 +14,9 @@ class Driver(Base):
     contact = Column(String)
     vehicle_id = Column(Integer, ForeignKey('vehicles.id'))
     vehicle = relationship("Vehicle", back_populates="drivers")
+    
+    def __repr__(self) :
+        return super().__repr__()
 
 # Vehicle Model
 class Vehicle(Base):
@@ -23,6 +26,9 @@ class Vehicle(Base):
     registration_number = Column(String)
     drivers = relationship("Driver", back_populates="vehicle")
 
+    def __repr__(self) :
+        return super().__repr__()
+
 # Trip Model
 class Trip(Base):
     __tablename__ = 'trips'
@@ -31,6 +37,9 @@ class Trip(Base):
     vehicle_id = Column(Integer, ForeignKey('vehicles.id'))
     start_time = Column(DateTime, default=datetime.datetime.utcnow)
     end_time = Column(DateTime)
+
+    def __repr__(self) :
+        return super().__repr__()
 
 # Create tables in the database
 Base.metadata.create_all(engine)
