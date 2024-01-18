@@ -1,10 +1,11 @@
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
-
-from sqlalchemy.ext.associationproxy import association_proxy
 from sqlalchemy.orm import sessionmaker
-from main import Base , datetime,engine
+from main import Base ,datetime,engine
+
+
+
 
  #Driver Model
 class Driver(Base):

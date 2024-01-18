@@ -9,8 +9,9 @@ importlib-metadata = "6.0.0"
 importlib-resources = "5.10.0"
 ipdb = "0.13.9"
 SQLAlchemy = "1.4"
-faker = "22.1.0"
+faker = "18.13.0"
+
 [dev-packages]
 
 [requires]
-python_version = "3.11"
+python_version = "3.11.6"
